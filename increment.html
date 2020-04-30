@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="increment.js"></script>
+    <title>Increment for debugging</title>
+  </head>
+  <body>
+    <div id="myapp"></div>
+  </body>
+  <script type="text/javascript">
+    const app = Elm.Increment.init({
+        node: document.getElementById('myapp')
+    });
+
+    app.ports.incrementPort.subscribe(function(message){
+        console.log(message);
+    });
+  </script>
+</html>

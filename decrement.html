@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="decrement.js"></script>
+    <title>Decrement for debugging</title>
+  </head>
+  <body>
+    <div id="myapp"></div>
+  </body>
+  <script type="text/javascript">
+    const app = Elm.Decrement.init({
+        node: document.getElementById('myapp')
+    });
+
+    app.ports.decrementPort.subscribe(function(message){
+        console.log(message);
+    });
+  </script>
+</html>
